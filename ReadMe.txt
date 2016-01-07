@@ -1,35 +1,16 @@
-========================================================================
-    APPLICATION : Learning10000 Project Overview
-========================================================================
+Learning 10000
 
-AppWizard has created this Learning10000 Application for you.  
+The goal of this project is to create an AI capable of learning how to play the dice game 10000 such that it finds a policy that is significantly better than a random valid action selection policy. A bonus goal is to learn it well enough to play well against a human. 
 
-This file contains a summary of what you will find in each of the files that
-make up your Learning10000 application.
+It will utilize reinfoced learning principles and the Expected Sarsa algorithm.
+It will create the state space lazily and generate valid actions as new states are found. (sacrifices runtime speed for memory
+efficiency and simplicity of implementation)
 
-Learning10000.vcxproj
-    This is the main project file for VC++ projects generated using an Application Wizard. 
-    It contains information about the version of Visual C++ that generated the file, and 
-    information about the platforms, configurations, and project features selected with the
-    Application Wizard.
 
-Learning10000.vcxproj.filters
-    This is the filters file for VC++ projects generated using an Application Wizard. 
-    It contains information about the association between the files in your project 
-    and the filters. This association is used in the IDE to show grouping of files with
-    similar extensions under a specific node (for e.g. ".cpp" files are associated with the
-    "Source Files" filter).
+Current Status:
+General framework is in place, encoding of data for efficient memory utilization and dynamic creation of valid actions and 
+state space management. 
 
-Learning10000.cpp
-    This is the main application source file.
-
-AssemblyInfo.cpp
-	Contains custom attributes for modifying assembly metadata.
-
-/////////////////////////////////////////////////////////////////////////////
-Other notes:
-
-AppWizard uses "TODO:" to indicate parts of the source code you
-should add to or customize.
-
-/////////////////////////////////////////////////////////////////////////////
+TODO:
+create functions to manage the flow of the game upon actions being taken, and return data used by ES algorithm
+implement the ES algorithm itself 
